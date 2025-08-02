@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./src/output.css" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet" />
     <title>Sahil Hasnain - Full-Stack Developer</title>
-   
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,13 +93,36 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
-      <div class="container px-4 mx-auto md:px-6">
-        <div class="flex flex-col items-center justify-center md:flex-row">
-          <div class="inline mx-auto">
-            <p class="mb-2 font-semibold text-primary">Full-Stack Developer</p>
+    <section
+      id="home"
+      class="relative pt-24 pb-16 overflow-hidden md:pt-32 md:pb-24"
+    >
+      <!-- Background Elements -->
+      <div class="absolute top-0 left-0 z-0 w-full h-full overflow-hidden">
+        <div
+          class="absolute rounded-full -top-24 -left-24 w-96 h-96 bg-primary opacity-5"
+        ></div>
+        <div
+          class="absolute rounded-full -bottom-24 -right-24 w-96 h-96 bg-secondary opacity-5"
+        ></div>
+        <div
+          class="absolute w-64 h-64 bg-blue-300 rounded-full top-1/4 right-1/4 opacity-5"
+        ></div>
+      </div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
+        <div class="flex flex-col items-center justify-center">
+          <div class="max-w-3xl mx-auto text-center animate-fadeIn">
+            <div
+              class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full text-primary bg-blue-50"
+            >
+              <span class="flex items-center justify-center">
+                <span class="w-2 h-2 mr-2 rounded-full bg-primary"></span>
+                Full-Stack Developer
+              </span>
+            </div>
             <h1
-              class="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+              class="mb-6 text-4xl font-bold leading-tight text-transparent md:text-5xl lg:text-6xl bg-gradient-to-r from-primary to-secondary bg-clip-text"
             >
               I turn ideas into scalable, user-focused web & mobile
               applications.
@@ -108,36 +131,48 @@
               Building fast, functional, and beautiful applications using modern
               web and mobile technologies.
             </p>
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap justify-center gap-4">
               <a
                 href="#contact"
-                class="px-6 py-3 font-medium text-white transition rounded-lg bg-primary hover:bg-secondary"
+                class="px-6 py-3 font-medium text-white transition rounded-lg shadow-lg bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary hover:shadow-xl"
               >
-                Get in Touch
+                <span class="flex items-center">
+                  Get in Touch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </span>
               </a>
               <a
                 href="#projects"
-                class="px-6 py-3 font-medium text-gray-800 transition border border-gray-300 rounded-lg hover:border-primary"
+                class="px-6 py-3 font-medium transition border-2 border-gray-300 rounded-lg text-dark hover:border-primary hover:text-primary"
               >
                 View Projects
               </a>
             </div>
-          </div>
-          <div class="justify-center hidden md:w-1/2">
-            <div class="relative">
-              <div
-                class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-75"
-              ></div>
-              <div
-                class="relative hidden w-64 h-64 overflow-hidden bg-white border-4 border-white rounded-full md:h-80 md:w-80"
-              >
-                <!-- Replace with your image -->
-                <div
-                  class="flex items-center justify-center w-full h-full bg-gray-200"
-                >
-                  <span class="text-gray-500">Your Image Here</span>
-                </div>
-              </div>
+
+            <!-- Social Icons -->
+            <div class="flex items-center justify-center mt-8 space-x-4">
+              <a href="#" class="text-gray-600 transition hover:text-primary">
+                <i class="text-xl fab fa-github"></i>
+              </a>
+              <a href="#" class="text-gray-600 transition hover:text-primary">
+                <i class="text-xl fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-600 transition hover:text-primary">
+                <i class="text-xl fab fa-twitter"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -145,48 +180,195 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white md:py-24">
-      <div class="container px-4 mx-auto md:px-6">
+    <section
+      id="about"
+      class="relative py-16 overflow-hidden bg-white md:py-24"
+    >
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full opacity-30"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-50 opacity-30"
+      ></div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
         <div class="mb-12 text-center">
-          <p class="mb-2 font-semibold text-primary">About Me</p>
-          <h2 class="text-3xl font-bold md:text-4xl">Who I Am</h2>
+          <div
+            class="inline-block px-4 py-1 mb-2 text-sm font-semibold rounded-full text-primary bg-blue-50"
+          >
+            <span class="flex items-center justify-center"> About Me </span>
+          </div>
+          <h2
+            class="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text"
+          >
+            Who I Am
+          </h2>
         </div>
-        <div class="max-w-3xl mx-auto">
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            I'm Sahil Hasnain — a passionate Full-Stack Developer with 1+ year
-            of real-world experience building fast, functional, and beautiful
-            applications using modern web and mobile technologies.
-          </p>
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            I specialize in React, Next.js, TailwindCSS, and Appwrite for
-            scalable full-stack web apps. On the mobile side, I build
-            production-ready apps using React Native and Expo, integrated with
-            real-time features, cloud storage, and authentication.
-          </p>
-          <p class="mb-6 text-lg leading-relaxed text-gray-700">
-            Over the past year, I've built and deployed multiple real-world apps
-            like:
-          </p>
-          <ul class="pl-6 mb-6 text-lg text-gray-700 list-disc">
-            <li class="mb-2">
-              A Google Drive clone with file management & uploads (StoreIt)
-            </li>
-            <li class="mb-2">
-              A mobile-first food delivery app in React Native
-            </li>
-            <li class="mb-2">
-              A responsive admin dashboard with real-time Appwrite integration
-            </li>
-            <li>Patient management system, AI SaaS tools, and more...</li>
-          </ul>
-          <p class="mb-8 text-lg leading-relaxed text-gray-700">
-            I believe in clean code, reusable components, and UI/UX that users
-            <em>actually</em> enjoy.
-          </p>
-          <p class="text-lg italic font-medium leading-relaxed text-gray-700">
-            "Sahil delivered pixel-perfect, production-grade apps with speed,
-            clarity, and a deep understanding of full-stack development."
-          </p>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- About Content -->
+          <div>
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 gap-4 mb-8 sm:grid-cols-4">
+              <div class="p-4 text-center rounded-lg bg-blue-50">
+                <h3 class="text-3xl font-bold text-primary">1+</h3>
+                <p class="text-sm text-gray-600">Years Experience</p>
+              </div>
+              <div class="p-4 text-center rounded-lg bg-blue-50">
+                <h3 class="text-3xl font-bold text-primary">10+</h3>
+                <p class="text-sm text-gray-600">Projects</p>
+              </div>
+              <div class="p-4 text-center rounded-lg bg-blue-50">
+                <h3 class="text-3xl font-bold text-primary">5+</h3>
+                <p class="text-sm text-gray-600">Technologies</p>
+              </div>
+              <div class="p-4 text-center rounded-lg bg-blue-50">
+                <h3 class="text-3xl font-bold text-primary">100%</h3>
+                <p class="text-sm text-gray-600">Dedication</p>
+              </div>
+            </div>
+
+            <p class="mb-6 text-lg leading-relaxed text-gray-700">
+              I'm
+              <span class="font-semibold text-primary">Sahil Hasnain</span> — a
+              passionate Full-Stack Developer with 1+ year of real-world
+              experience building fast, functional, and beautiful applications
+              using modern web and mobile technologies.
+            </p>
+            <p class="mb-6 text-lg leading-relaxed text-gray-700">
+              I specialize in
+              <span class="font-semibold"
+                >React, Next.js, TailwindCSS, and Appwrite</span
+              >
+              for scalable full-stack web apps. On the mobile side, I build
+              production-ready apps using
+              <span class="font-semibold">React Native and Expo</span>,
+              integrated with real-time features, cloud storage, and
+              authentication.
+            </p>
+            <p class="mb-4 text-lg leading-relaxed text-gray-700">
+              Over the past year, I've built and deployed multiple real-world
+              apps like:
+            </p>
+            <ul class="pl-6 mb-6 space-y-3 text-lg text-gray-700">
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-5 h-5 mt-1 mr-2 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span
+                  >A Google Drive clone with file management & uploads
+                  (StoreIt)</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-5 h-5 mt-1 mr-2 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span>A mobile-first food delivery app in React Native</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-5 h-5 mt-1 mr-2 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span
+                  >A responsive admin dashboard with real-time Appwrite
+                  integration</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-5 h-5 mt-1 mr-2 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span
+                  >Patient management system, AI SaaS tools, and more...</span
+                >
+              </li>
+            </ul>
+            <p class="mb-8 text-lg leading-relaxed text-gray-700">
+              I believe in clean code, reusable components, and UI/UX that users
+              <em>actually</em> enjoy.
+            </p>
+
+            <!-- Testimonial/Quote -->
+            <div class="p-6 border-l-4 bg-blue-50 rounded-xl border-primary">
+              <p
+                class="text-lg italic font-medium leading-relaxed text-gray-700"
+              >
+                "Sahil delivered pixel-perfect, production-grade apps with
+                speed, clarity, and a deep understanding of full-stack
+                development."
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-8 text-center">
+              <a
+                href="#contact"
+                class="inline-flex items-center px-6 py-3 font-medium text-white transition rounded-lg bg-primary hover:bg-secondary"
+              >
+                <span>Let's work together</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
