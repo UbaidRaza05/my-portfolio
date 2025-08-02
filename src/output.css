@@ -948,6 +948,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .\!text-transparent {
+    color: transparent !important;
+  }
   .text-blue-800 {
     color: var(--color-blue-800);
   }
