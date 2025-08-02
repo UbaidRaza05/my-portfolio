@@ -26,13 +26,15 @@
     <nav class="fixed z-50 w-full bg-white shadow-sm">
       <div class="container px-4 py-4 mx-auto md:px-6">
         <div class="flex items-center justify-between">
-          <a href="#" class="text-2xl font-bold text-primary"
+          <a
+            href="#"
+            class="text-2xl font-bold text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"
             >Sahil<span class="text-dark">.</span></a
           >
 
           <!-- Mobile Menu Button -->
           <button id="menu-toggle" class="md:hidden focus:outline-none">
-            <i class="text-2xl fas fa-bars"></i>
+            <i class="text-2xl fas fa-bars text-primary"></i>
           </button>
 
           <!-- Desktop Menu -->
@@ -61,7 +63,10 @@
             id="mobile-menu"
             class="fixed inset-0 z-50 flex-col items-center justify-center hidden bg-white"
           >
-            <button id="close-menu" class="absolute text-2xl top-5 right-5">
+            <button
+              id="close-menu"
+              class="absolute text-2xl text-primary top-5 right-5"
+            >
               <i class="fas fa-times"></i>
             </button>
             <div class="flex flex-col space-y-6 text-xl text-center">
@@ -374,11 +379,30 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 md:py-24 bg-gray-50">
-      <div class="container px-4 mx-auto md:px-6">
+    <section
+      id="projects"
+      class="relative py-16 overflow-hidden md:py-24 bg-gray-50"
+    >
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-10"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 rounded-full w-96 h-96 bg-blue-50 opacity-10"
+      ></div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
         <div class="mb-12 text-center">
-          <p class="mb-2 font-semibold text-primary">My Work</p>
-          <h2 class="text-3xl font-bold md:text-4xl">Recent Projects</h2>
+          <div
+            class="inline-block px-4 py-1 mb-2 text-sm font-semibold rounded-full text-primary bg-blue-50"
+          >
+            <span class="flex items-center justify-center">My Work</span>
+          </div>
+          <h2
+            class="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text"
+          >
+            Recent Projects
+          </h2>
         </div>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <!-- Project 1 -->
@@ -386,7 +410,11 @@
             class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
           >
             <div class="flex items-center justify-center h-48 bg-gray-200">
-              <span class="text-gray-500">Project Image</span>
+              <img
+                src="/images/storage.png"
+                alt="Storage Platform"
+                class="object-cover w-full h-full"
+              />
             </div>
             <div class="p-6">
               <h3 class="mb-2 text-xl font-bold">StoreIt - Cloud Storage</h3>
@@ -396,15 +424,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >React</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >Next.js</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >Appwrite</span
                 >
               </div>
@@ -430,7 +458,11 @@
             class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
           >
             <div class="flex items-center justify-center h-48 bg-gray-200">
-              <span class="text-gray-500">Project Image</span>
+              <img
+                src="/images/storage.png"
+                alt="Storage Platform"
+                class="object-cover w-full h-full"
+              />
             </div>
             <div class="p-6">
               <h3 class="mb-2 text-xl font-bold">Food Delivery App</h3>
@@ -440,15 +472,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >React Native</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >Expo</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >NativeWind</span
                 >
               </div>
@@ -474,7 +506,11 @@
             class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
           >
             <div class="flex items-center justify-center h-48 bg-gray-200">
-              <span class="text-gray-500">Project Image</span>
+              <img
+                src="/images/storage.png"
+                alt="Storage Platform"
+                class="object-cover w-full h-full"
+              />
             </div>
             <div class="p-6">
               <h3 class="mb-2 text-xl font-bold">Admin Dashboard</h3>
@@ -484,15 +520,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >React</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >Tailwind</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  class="bg-blue-50 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
                   >Appwrite</span
                 >
               </div>
@@ -517,17 +553,36 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-white md:py-24">
-      <div class="container px-4 mx-auto md:px-6">
+    <section
+      id="skills"
+      class="relative py-16 overflow-hidden bg-white md:py-24"
+    >
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-100 rounded-full opacity-20"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-50 opacity-20"
+      ></div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
         <div class="mb-12 text-center">
-          <p class="mb-2 font-semibold text-primary">My Expertise</p>
-          <h2 class="text-3xl font-bold md:text-4xl">Tech Stack</h2>
+          <div
+            class="inline-block px-4 py-1 mb-2 text-sm font-semibold rounded-full text-primary bg-blue-50"
+          >
+            <span class="flex items-center justify-center">My Expertise</span>
+          </div>
+          <h2
+            class="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text"
+          >
+            Tech Stack
+          </h2>
         </div>
         <div class="max-w-4xl mx-auto">
           <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
             <!-- Skill Items -->
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-react"></i>
@@ -536,7 +591,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-js"></i>
@@ -545,7 +600,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-html5"></i>
@@ -554,7 +609,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-css3-alt"></i>
@@ -563,7 +618,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-node-js"></i>
@@ -572,7 +627,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fas fa-mobile-alt"></i>
@@ -581,7 +636,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fas fa-database"></i>
@@ -590,7 +645,7 @@
             </div>
 
             <div
-              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+              class="flex flex-col items-center p-4 transition rounded-lg bg-blue-50 hover:shadow-md"
             >
               <div class="mb-2 text-4xl text-primary">
                 <i class="fab fa-git-alt"></i>
@@ -602,27 +657,27 @@
           <!-- Tech Tags -->
           <div class="flex flex-wrap justify-center gap-3 mt-12">
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >Next.js (App Router)</span
             >
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >Tailwind CSS</span
             >
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >Appwrite</span
             >
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >Zod</span
             >
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >Expo</span
             >
             <span
-              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              class="px-4 py-2 font-medium text-gray-800 rounded-full shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10"
               >NativeWind</span
             >
           </div>
@@ -631,11 +686,30 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 md:py-24 bg-gray-50">
-      <div class="container px-4 mx-auto md:px-6">
+    <section
+      id="contact"
+      class="relative py-16 overflow-hidden md:py-24 bg-gray-50"
+    >
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 right-0 bg-blue-100 rounded-full w-96 h-96 opacity-10"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-50 opacity-20"
+      ></div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
         <div class="mb-12 text-center">
-          <p class="mb-2 font-semibold text-primary">Get In Touch</p>
-          <h2 class="text-3xl font-bold md:text-4xl">Contact Me</h2>
+          <div
+            class="inline-block px-4 py-1 mb-2 text-sm font-semibold rounded-full text-primary bg-blue-50"
+          >
+            <span class="flex items-center justify-center">Get In Touch</span>
+          </div>
+          <h2
+            class="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text"
+          >
+            Contact Me
+          </h2>
           <p class="max-w-2xl mx-auto mt-4 text-gray-600">
             Have an idea or need a reliable developer? Let's connect — I'm
             currently open to freelance and remote opportunities.
@@ -702,7 +776,7 @@
             </div>
             <button
               type="submit"
-              class="w-full px-6 py-3 font-medium text-white transition rounded-lg bg-primary hover:bg-secondary"
+              class="w-full px-6 py-3 font-medium text-white transition rounded-lg shadow-lg bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary hover:shadow-xl"
             >
               Send Message
             </button>
@@ -714,7 +788,7 @@
               class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
             >
               <div
-                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20"
               >
                 <i class="text-xl fas fa-envelope text-primary"></i>
               </div>
@@ -726,7 +800,7 @@
               class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
             >
               <div
-                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20"
               >
                 <i class="text-xl fas fa-phone text-primary"></i>
               </div>
@@ -738,7 +812,7 @@
               class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
             >
               <div
-                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+                class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20"
               >
                 <i class="text-xl fas fa-map-marker-alt text-primary"></i>
               </div>
@@ -751,8 +825,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-white bg-dark">
-      <div class="container px-4 mx-auto md:px-6">
+    <footer class="relative py-12 overflow-hidden text-white bg-dark">
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-primary opacity-5"
+      ></div>
+
+      <div class="container relative z-10 px-4 mx-auto md:px-6">
         <div class="flex flex-col items-center justify-between md:flex-row">
           <div class="mb-6 md:mb-0">
             <a href="#" class="text-2xl font-bold"
@@ -765,25 +847,25 @@
           <div class="flex space-x-4">
             <a
               href="#"
-              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+              class="flex items-center justify-center w-10 h-10 transition rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-primary hover:to-secondary"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
               href="#"
-              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+              class="flex items-center justify-center w-10 h-10 transition rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-primary hover:to-secondary"
             >
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a
               href="#"
-              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+              class="flex items-center justify-center w-10 h-10 transition rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-primary hover:to-secondary"
             >
               <i class="fab fa-twitter"></i>
             </a>
             <a
               href="#"
-              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+              class="flex items-center justify-center w-10 h-10 transition rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-primary hover:to-secondary"
             >
               <i class="fab fa-instagram"></i>
             </a>
