@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Sahil Hasnain - Full-Stack Developer</title>
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed z-50 w-full bg-white shadow-sm">
+      <div class="container px-4 py-4 mx-auto md:px-6">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold text-primary"
+            >Sahil<span class="text-dark">.</span></a
+          >
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <i class="text-2xl fas fa-bars"></i>
+          </button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden space-x-8 md:flex">
+            <a href="#home" class="font-medium transition hover:text-primary"
+              >Home</a
+            >
+            <a href="#about" class="font-medium transition hover:text-primary"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="font-medium transition hover:text-primary"
+              >Projects</a
+            >
+            <a href="#skills" class="font-medium transition hover:text-primary"
+              >Skills</a
+            >
+            <a href="#contact" class="font-medium transition hover:text-primary"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu (Hidden by default) -->
+          <div
+            id="mobile-menu"
+            class="fixed inset-0 z-50 flex-col items-center justify-center hidden bg-white"
+          >
+            <button id="close-menu" class="absolute text-2xl top-5 right-5">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="flex flex-col space-y-6 text-xl text-center">
+              <a href="#home" class="font-medium transition hover:text-primary"
+                >Home</a
+              >
+              <a href="#about" class="font-medium transition hover:text-primary"
+                >About</a
+              >
+              <a
+                href="#projects"
+                class="font-medium transition hover:text-primary"
+                >Projects</a
+              >
+              <a
+                href="#skills"
+                class="font-medium transition hover:text-primary"
+                >Skills</a
+              >
+              <a
+                href="#contact"
+                class="font-medium transition hover:text-primary"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="flex flex-col items-center md:flex-row">
+          <div class="mb-10 md:w-1/2 md:mb-0">
+            <p class="mb-2 font-semibold text-primary">Full-Stack Developer</p>
+            <h1
+              class="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+            >
+              I turn ideas into scalable, user-focused web & mobile
+              applications.
+            </h1>
+            <p class="mb-8 text-lg text-gray-600">
+              Building fast, functional, and beautiful applications using modern
+              web and mobile technologies.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="px-6 py-3 font-medium text-white transition rounded-lg bg-primary hover:bg-secondary"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="#projects"
+                class="px-6 py-3 font-medium text-gray-800 transition border border-gray-300 rounded-lg hover:border-primary"
+              >
+                View Projects
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center md:w-1/2">
+            <div class="relative">
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-75"
+              ></div>
+              <div
+                class="relative hidden w-64 h-64 overflow-hidden bg-white border-4 border-white rounded-full md:h-80 md:w-80"
+              >
+                <!-- Replace with your image -->
+                <div
+                  class="flex items-center justify-center w-full h-full bg-gray-200"
+                >
+                  <span class="text-gray-500">Your Image Here</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white md:py-24">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="mb-12 text-center">
+          <p class="mb-2 font-semibold text-primary">About Me</p>
+          <h2 class="text-3xl font-bold md:text-4xl">Who I Am</h2>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <p class="mb-6 text-lg leading-relaxed text-gray-700">
+            I'm Sahil Hasnain — a passionate Full-Stack Developer with 1+ year
+            of real-world experience building fast, functional, and beautiful
+            applications using modern web and mobile technologies.
+          </p>
+          <p class="mb-6 text-lg leading-relaxed text-gray-700">
+            I specialize in React, Next.js, TailwindCSS, and Appwrite for
+            scalable full-stack web apps. On the mobile side, I build
+            production-ready apps using React Native and Expo, integrated with
+            real-time features, cloud storage, and authentication.
+          </p>
+          <p class="mb-6 text-lg leading-relaxed text-gray-700">
+            Over the past year, I've built and deployed multiple real-world apps
+            like:
+          </p>
+          <ul class="pl-6 mb-6 text-lg text-gray-700 list-disc">
+            <li class="mb-2">
+              A Google Drive clone with file management & uploads (StoreIt)
+            </li>
+            <li class="mb-2">
+              A mobile-first food delivery app in React Native
+            </li>
+            <li class="mb-2">
+              A responsive admin dashboard with real-time Appwrite integration
+            </li>
+            <li>Patient management system, AI SaaS tools, and more...</li>
+          </ul>
+          <p class="mb-8 text-lg leading-relaxed text-gray-700">
+            I believe in clean code, reusable components, and UI/UX that users
+            <em>actually</em> enjoy.
+          </p>
+          <p class="text-lg italic font-medium leading-relaxed text-gray-700">
+            "Sahil delivered pixel-perfect, production-grade apps with speed,
+            clarity, and a deep understanding of full-stack development."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-gray-50">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="mb-12 text-center">
+          <p class="mb-2 font-semibold text-primary">My Work</p>
+          <h2 class="text-3xl font-bold md:text-4xl">Recent Projects</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Project 1 -->
+          <div
+            class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
+          >
+            <div class="flex items-center justify-center h-48 bg-gray-200">
+              <span class="text-gray-500">Project Image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-bold">StoreIt - Cloud Storage</h3>
+              <p class="mb-4 text-gray-600">
+                A Google Drive clone with file management & uploads built with
+                React, Next.js, and Appwrite.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >React</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Next.js</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Appwrite</span
+                >
+              </div>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fab fa-github"></i>
+                </a>
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
+          >
+            <div class="flex items-center justify-center h-48 bg-gray-200">
+              <span class="text-gray-500">Project Image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-bold">Food Delivery App</h3>
+              <p class="mb-4 text-gray-600">
+                A mobile-first food delivery application built with React Native
+                and Expo.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >React Native</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Expo</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >NativeWind</span
+                >
+              </div>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fab fa-github"></i>
+                </a>
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-lg"
+          >
+            <div class="flex items-center justify-center h-48 bg-gray-200">
+              <span class="text-gray-500">Project Image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-bold">Admin Dashboard</h3>
+              <p class="mb-4 text-gray-600">
+                A responsive admin dashboard with real-time Appwrite integration
+                and data visualization.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >React</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Tailwind</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Appwrite</span
+                >
+              </div>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fab fa-github"></i>
+                </a>
+                <a
+                  href="#"
+                  class="transition text-primary hover:text-secondary"
+                >
+                  <i class="text-lg fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white md:py-24">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="mb-12 text-center">
+          <p class="mb-2 font-semibold text-primary">My Expertise</p>
+          <h2 class="text-3xl font-bold md:text-4xl">Tech Stack</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Skill Items -->
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-react"></i>
+              </div>
+              <h3 class="font-semibold">React.js</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-js"></i>
+              </div>
+              <h3 class="font-semibold">JavaScript</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h3 class="font-semibold">HTML5</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <h3 class="font-semibold">CSS3</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-node-js"></i>
+              </div>
+              <h3 class="font-semibold">Node.js</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="font-semibold">React Native</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3 class="font-semibold">MongoDB</h3>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 transition rounded-lg bg-gray-50 hover:shadow-md"
+            >
+              <div class="mb-2 text-4xl text-primary">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <h3 class="font-semibold">Git & GitHub</h3>
+            </div>
+          </div>
+
+          <!-- Tech Tags -->
+          <div class="flex flex-wrap justify-center gap-3 mt-12">
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >Next.js (App Router)</span
+            >
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >Tailwind CSS</span
+            >
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >Appwrite</span
+            >
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >Zod</span
+            >
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >Expo</span
+            >
+            <span
+              class="px-4 py-2 font-medium text-gray-800 bg-gray-100 rounded-full"
+              >NativeWind</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="mb-12 text-center">
+          <p class="mb-2 font-semibold text-primary">Get In Touch</p>
+          <h2 class="text-3xl font-bold md:text-4xl">Contact Me</h2>
+          <p class="max-w-2xl mx-auto mt-4 text-gray-600">
+            Have an idea or need a reliable developer? Let's connect — I'm
+            currently open to freelance and remote opportunities.
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <form
+            id="contact-form"
+            class="p-6 bg-white shadow-md md:p-8 rounded-xl"
+          >
+            <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
+              <div>
+                <label for="name" class="block mb-2 font-medium text-gray-700"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 transition border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium text-gray-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 transition border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="subject" class="block mb-2 font-medium text-gray-700"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="w-full px-4 py-3 transition border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block mb-2 font-medium text-gray-700"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 transition border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full px-6 py-3 font-medium text-white transition rounded-lg bg-primary hover:bg-secondary"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="grid grid-cols-1 gap-6 mt-10 md:grid-cols-3">
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+              >
+                <i class="text-xl fas fa-envelope text-primary"></i>
+              </div>
+              <h3 class="mb-1 text-lg font-semibold">Email</h3>
+              <p class="text-center text-gray-600">youremail@example.com</p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+              >
+                <i class="text-xl fas fa-phone text-primary"></i>
+              </div>
+              <h3 class="mb-1 text-lg font-semibold">Phone</h3>
+              <p class="text-center text-gray-600">+1 234 567 890</p>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-full"
+              >
+                <i class="text-xl fas fa-map-marker-alt text-primary"></i>
+              </div>
+              <h3 class="mb-1 text-lg font-semibold">Location</h3>
+              <p class="text-center text-gray-600">India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-white bg-dark">
+      <div class="container px-4 mx-auto md:px-6">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="text-2xl font-bold"
+              >Sahil<span class="text-primary">.</span></a
+            >
+            <p class="mt-2 text-gray-400">Full-Stack Developer</p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 transition bg-gray-800 rounded-full hover:bg-primary"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="pt-8 mt-8 text-center text-gray-400 border-t border-gray-800"
+        >
+          <p>&copy; 2025 Sahil Hasnain. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
