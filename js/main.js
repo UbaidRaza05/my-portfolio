@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuToggle.addEventListener("click", function () {
     mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex", "flex-col");
     document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
   });
 
   closeMenu.addEventListener("click", function () {
     mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("flex", "flex-col");
     document.body.style.overflow = ""; // Re-enable scrolling
   });
 
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileMenuLinks.forEach((link) => {
     link.addEventListener("click", function () {
       mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex", "flex-col");
       document.body.style.overflow = "";
     });
   });
@@ -76,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Active navigation link highlighting
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-  window.addEventListener("scroll", function () {
+  function updateActiveLinks() {
     let current = "";
 
     sections.forEach((section) => {
@@ -89,13 +93,56 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // Update desktop menu active link
     navLinks.forEach((link) => {
-      link.classList.remove("text-primary");
+      link.classList.remove(
+        "text-transparent",
+        "bg-gradient-to-r",
+        "from-primary",
+        "to-secondary",
+        "bg-clip-text"
+      );
       if (link.getAttribute("href").substring(1) === current) {
-        link.classList.add("text-primary");
+        link.classList.add(
+          "text-transparent",
+          "bg-gradient-to-r",
+          "from-primary",
+          "to-secondary",
+          "bg-clip-text"
+        );
       }
     });
-  });
+
+    // Update mobile menu active link
+    mobileNavLinks.forEach((link) => {
+      // Remove both text-primary and gradient classes
+      link.classList.remove(
+        "text-primary",
+        "text-transparent",
+        "bg-gradient-to-r",
+        "from-primary",
+        "to-secondary",
+        "bg-clip-text"
+      );
+
+      if (link.getAttribute("href").substring(1) === current) {
+        // Add gradient text for active mobile link
+        link.classList.add(
+          "text-transparent",
+          "bg-gradient-to-r",
+          "from-primary",
+          "to-secondary",
+          "bg-clip-text"
+        );
+      }
+    });
+  }
+
+  // Call on scroll
+  window.addEventListener("scroll", updateActiveLinks);
+
+  // Call once on page load
+  updateActiveLinks();
 
   // Type effect for hero heading (optional)
   function initTypeEffect() {
