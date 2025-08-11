@@ -55,25 +55,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
+    // Form submission using AJAX to Formspree
+    contactForm.addEventListener("submit", async function (event) {
       event.preventDefault();
-
-      // Get form values
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
+      // Gather form data
+      const formData = new FormData(contactForm);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const message = formData.get("message");
 
       // Basic validation
-      if (!name || !email || !subject || !message) {
+      if (!name || !email || !message) {
         alert("Please fill in all fields");
         return;
       }
 
-      // Form submission logic would go here
-      // For demo purposes, we'll just show an alert
-      alert("Thanks for your message! I will get back to you soon.");
-      contactForm.reset();
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        });
+
+        if (response.ok) {
+          alert("Thanks for your message! I will get back to you soon.");
+          contactForm.reset();
+        } else {
+          alert("Oops! There was a problem submitting your form");
+        }
+      } catch (error) {
+        alert("Oops! There was a problem submitting your form");
+      }
     });
   }
 
