@@ -55,18 +55,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
+    // Helper: validate email format
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
     // Form submission using AJAX to Formspree
     contactForm.addEventListener("submit", async function (event) {
       event.preventDefault();
-      // Gather form data
       const formData = new FormData(contactForm);
-      const name = formData.get("name");
-      const email = formData.get("email");
-      const message = formData.get("message");
+      const name = formData.get("name").trim();
+      const email = formData.get("email").trim();
+      const message = formData.get("message").trim();
 
-      // Basic validation
+      // Validation
       if (!name || !email || !message) {
         alert("Please fill in all fields");
+        return;
+      }
+      if (!isValidEmail(email)) {
+        alert("Please enter a valid email address");
         return;
       }
 
@@ -76,10 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
           headers: { Accept: "application/json" },
           body: formData,
         });
-
         if (response.ok) {
-          alert("Thanks for your message! I will get back to you soon.");
-          contactForm.reset();
+          // Redirect to thank you page with name
+          window.location.href = `thank-you.html?name=${encodeURIComponent(
+            name
+          )}`;
         } else {
           alert("Oops! There was a problem submitting your form");
         }
