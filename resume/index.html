@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahil Hasnain - Resume</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#6366F1",
+              dark: "#1F2937",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      @media print {
+        .no-print {
+          display: none;
+        }
+        body {
+          padding: 0;
+          margin: 0;
+        }
+        .print-container {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Control Bar -->
+    <div
+      class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-white shadow-md no-print"
+    >
+      <div>
+        <a
+          href="../index.html"
+          class="flex items-center px-4 py-2 text-white rounded-md bg-primary hover:bg-secondary"
+        >
+          <i class="mr-2 fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+      <div>
+        <button
+          id="download-pdf"
+          class="flex items-center px-4 py-2 text-white rounded-md bg-primary hover:bg-secondary"
+        >
+          <i class="mr-2 fas fa-download"></i> Download PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Resume Content -->
+    <div class="container p-4 mx-auto mt-20 mb-10 print-container">
+      <div
+        id="resume"
+        class="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-lg"
+      >
+        <!-- Header -->
+        <header class="pb-4 mb-4 border-b border-gray-200">
+          <h1
+            class="mb-2 text-3xl font-bold text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text"
+          >
+            Sahil Hasnain
+          </h1>
+          <h2 class="mb-2 text-lg font-semibold text-gray-600">
+            Full-Stack Developer (Fresher)
+          </h2>
+
+          <div class="flex flex-wrap gap-3 text-sm">
+            <div class="flex items-center text-gray-600">
+              <i class="mr-1 fas fa-envelope"></i>
+              <span>sahilhasnain0707@gmail.com</span>
+            </div>
+            <div class="flex items-center text-gray-600">
+              <i class="mr-1 fas fa-phone"></i>
+              <span>+91 9142047299</span>
+            </div>
+            <div class="flex items-center text-gray-600">
+              <i class="mr-1 fas fa-map-marker-alt"></i>
+              <span>India</span>
+            </div>
+            <div class="flex items-center text-gray-600">
+              <i class="mr-1 fab fa-github"></i>
+              <a
+                href="https://github.com/sahilhasnain"
+                class="text-primary hover:underline"
+                target="_blank"
+                >github.com/sahilhasnain</a
+              >
+            </div>
+          </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="mb-4">
+          <h2 class="mb-2 text-xl font-bold text-gray-800">
+            Professional Summary
+          </h2>
+          <p class="text-sm text-gray-600">
+            A passionate Full-Stack Developer with strong knowledge of React,
+            Next.js, and React Native. Proficient in building responsive web
+            applications and mobile apps with clean code and modern best
+            practices. Looking for opportunities to apply my skills in a
+            professional environment and grow as a developer.
+          </p>
+        </section>
+
+        <!-- Skills -->
+        <section class="mb-4">
+          <h2 class="mb-2 text-xl font-bold text-gray-800">Technical Skills</h2>
+
+          <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+            <div class="mb-2">
+              <h3 class="mb-1 text-base font-semibold text-gray-700">
+                Frontend
+              </h3>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >React.js</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Next.js</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >HTML5</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >CSS3</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Tailwind</span
+                >
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <h3 class="mb-1 text-base font-semibold text-gray-700">Mobile</h3>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >React Native</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Expo</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >NativeWind</span
+                >
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <h3 class="mb-1 text-base font-semibold text-gray-700">
+                Backend & Database
+              </h3>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Appwrite</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >MongoDB</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <h3 class="mb-1 text-base font-semibold text-gray-700">
+                Tools & Others
+              </h3>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Git & GitHub</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Zod</span
+                >
+                <span
+                  class="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Problem Solving</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="mb-4">
+          <h2 class="mb-2 text-xl font-bold text-gray-800">Projects</h2>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="p-3 rounded-lg bg-gray-50">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-base font-semibold text-gray-700">
+                  StoreIt - Cloud Storage
+                </h3>
+                <a
+                  href="https://storeit-seven-liart.vercel.app/"
+                  target="_blank"
+                  class="text-xs text-primary hover:underline"
+                  >Live Demo</a
+                >
+              </div>
+              <p class="mb-1 text-xs text-gray-600">
+                Google Drive clone with file management & uploads
+              </p>
+              <div class="flex flex-wrap gap-1 mb-1">
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Next.js</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Appwrite</span
+                >
+              </div>
+              <ul class="ml-4 text-xs text-gray-600 list-disc">
+                <li>Secure file uploads with authentication</li>
+                <li>Responsive UI with Tailwind CSS</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-lg bg-gray-50">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-base font-semibold text-gray-700">
+                  Food Delivery App
+                </h3>
+              </div>
+              <p class="mb-1 text-xs text-gray-600">
+                Mobile app for ordering food from restaurants
+              </p>
+              <div class="flex flex-wrap gap-1 mb-1">
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >React Native</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Expo</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >NativeWind</span
+                >
+              </div>
+              <ul class="ml-4 text-xs text-gray-600 list-disc">
+                <li>Cross-platform mobile application</li>
+                <li>Smooth UI with animations for better UX</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-lg bg-gray-50">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-base font-semibold text-gray-700">
+                  Patient Management System
+                </h3>
+                <a
+                  href="https://patient-management-system-henna-two.vercel.app/"
+                  target="_blank"
+                  class="text-xs text-primary hover:underline"
+                  >Live Demo</a
+                >
+              </div>
+              <p class="mb-1 text-xs text-gray-600">
+                System to manage patients and appointments
+              </p>
+              <div class="flex flex-wrap gap-1 mb-1">
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Next.js</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Appwrite</span
+                >
+              </div>
+              <ul class="ml-4 text-xs text-gray-600 list-disc">
+                <li>Healthcare system with appointment scheduling</li>
+                <li>Secure user-friendly interface</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-lg bg-gray-50">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-base font-semibold text-gray-700">
+                  AI SaaS Landing Page
+                </h3>
+                <a
+                  href="https://xora-sahil.netlify.app/"
+                  target="_blank"
+                  class="text-xs text-primary hover:underline"
+                  >Live Demo</a
+                >
+              </div>
+              <p class="mb-1 text-xs text-gray-600">
+                Responsive landing page for an AI SaaS product
+              </p>
+              <div class="flex flex-wrap gap-1 mb-1">
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >React</span
+                >
+                <span
+                  class="px-1.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-primary"
+                  >Tailwind</span
+                >
+              </div>
+              <ul class="ml-4 text-xs text-gray-600 list-disc">
+                <li>Modern UI design with animations</li>
+                <li>Fully responsive across all devices</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+          <h2 class="mb-2 text-xl font-bold text-gray-800">Education</h2>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="p-3 rounded-lg bg-gray-50">
+              <h3 class="text-base font-semibold text-gray-700">
+                Bachelor of Computer Applications
+              </h3>
+              <p class="text-xs italic text-gray-500">2020 - 2023</p>
+              <p class="text-xs text-gray-600">
+                Computer Science and Programming
+              </p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-gray-50">
+              <h3 class="text-base font-semibold text-gray-700">
+                Self-Taught Developer
+              </h3>
+              <p class="text-xs italic text-gray-500">Continuous Learning</p>
+              <ul class="ml-4 text-xs text-gray-600 list-disc">
+                <li>Completed online courses in web and mobile development</li>
+                <li>Built projects to apply and reinforce concepts</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      // PDF Download functionality
+      document
+        .getElementById("download-pdf")
+        .addEventListener("click", function () {
+          const element = document.getElementById("resume");
+          const opt = {
+            margin: [10, 10, 10, 10],
+            filename: "sahil-hasnain-resume.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          };
+
+          // Generate PDF
+          html2pdf().set(opt).from(element).save();
+        });
+    </script>
+  </body>
+</html>
